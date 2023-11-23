@@ -1,0 +1,176 @@
+:root {
+  --primary: #409ba5;
+}
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  width: 60pc;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+h2 {
+  font-size: 25px;
+}
+.pic-and-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35pc;
+  margin: 0 auto;
+}
+
+.image-cropper {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 15px auto;
+}
+
+.image-cropper img {
+  display: inline;
+  margin: 0 auto;
+  height: 150%;
+  width: auto;
+  transform: translate(-5%, -10%);
+}
+
+img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.gh-graph {
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+}
+.gh-graph img {
+  width: 100%;
+}
+
+.line {
+  width: 60pc;
+  height: 1px;
+  border-bottom: 1px solid lightgray;
+  position: absolute;
+  margin-inline: auto;
+}
+
+.about-me {
+  padding-top: 20px;
+}
+
+a {
+  color: var(--primary);
+}
+
+.work-experience {
+  padding-top: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+.job-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.job {
+  text-align: justify;
+  width: 50pc;
+  padding-inline: 20px;
+}
+
+.job h3 {
+  text-align: center;
+}
+
+#resumakeImg {
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+}
+
+#fractylImg {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+#datafyImg {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+
+.project-showcase {
+  padding-top: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: var(--primary); /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+.project {
+  display: flex;
+  align-content: flex-start;
+  padding-block: 10px;
+}
+
+.project img {
+  height: 100px;
+  width: 100px;
+  margin: 0%;
+  border-radius: 5px;
+}
+
+.project-content {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.project-content h3,
+h5,
+p {
+  margin-block: 5px;
+}
+
+.project-content h5 {
+  color: gray;
+}
