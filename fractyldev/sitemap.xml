@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+  <url>
+    <loc>http://www.fractyldev.com/</loc>
+    <lastmod>2019-04-26</lastmod>
+  </url>
+  <url>
+    <loc>http://www.fractyldev.com/about.html</loc>
+    <lastmod>2019-04-26</lastmod>
+  </url>
+  <url>
+    <loc>http://www.fractyldev.com/contact.html</loc>
+  </url>
+  <url>
+    <loc>http://www.fractyldev.com/apps.html</loc>
+  </url>
+  <url>
+    <loc>http://www.fractyldev.com/morse/about.html</loc>
+  </url>
+  <url>
+    <loc>http://www.fractyldev.com/morse/privacy.html</loc>
+  </url>
+  <url>
+    <loc>http://www.fractyldev.com/morse/terms.html</loc>
+  </url>
+  <url>
+    <loc>http://www.fractyldev.com/morse/support/index.html</loc>
+  </url>
+  <url>
+    <loc>http://www.fractyldev.com/blog/index.html</loc>
+  </url>
+</urlset>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Waypoint Reports</title>
+		<link rel = "stylesheet" type = "text/css" href = "https://cdn.jsdelivr.net/gh/hunterball/fresh@1.0.2/fresh.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			:root {
+				--color-accent: #5bb8b5;
+				--text-accent: #ffffff;
+			}
+			.note-content {
+				margin: 10px;
+				border: 1px solid #d0d0d0;
+				padding: 10px;
+			}
+			.note-content.image {
+				max-height: 250px;
+				overflow-y: scroll;
+			}
+			.modal.card {
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class = "nav top">
+			<a class = "title" href = "https://waypoint.fractyldev.com">Waypoint Communication</a>
+			<a class = "item" data-tether = "loginModal">Login</a>
+		</div>
+		<div class = "nav mobile">
+			<a class = "title" href = "index.html">Waypoint Report</a>
+		</div>
+			<div id = "loginModal" class = "card rounded modal small">
+			<div class = "header">
+				<h3>Admin Login</h3>
+				<a class = "trigger" data-tether = "loginModal">&times;</a>
+			</div>
+			<div class = "content">
+				<input class = "full pill" type="email" name="email" id="email" placeholder = "email" />
+				<input class = "full pill" type="password" name="password" id="password" placeholder = "password"/>
+				<a class = "button small full pill accent buttonLogin">Login</a>
+			</div>
+		</div>
+		<div class = "main nav-top">
+			<div class = "header primary">
+				<h1>Safety and Acceptance are Our <br><span class = "text-inv-accent">#1 Priorities</span>.</h1>
+			</div>
+			<div class = "container">
+				<h4 class = "two-thirds m-full">Waypoint Communications and the Fractyl Development team are committed to the safety and well being of our users.</h4>
+				<div class = "half m-full">
+					<p>This is why we let all users report any note that violates the <a href = "https://waypoint.fractyldev.com/privacy">privacy policy</a> or <a href = "https://waypoint.fractyldev.com/terms">terms of service</a>. This can include, but is not limited to:</p><br>
+					<ul>
+						<li>Cyberbulling and harrassment</li>
+						<li>Sharing Vulgar or inappropriate language and/or content</li>
+						<li>Sharing anyone's personal information or data</li>
+						<li>Defaming or slandering someone or something</li>
+					</ul>
+					<br>
+					<p>You can report notes on the <a href = "https://waypoint.fractyldev.com">Waypoint</a> app today.</p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		
+		<script src = "https://cdn.jsdelivr.net/gh/hunterball/fresh@1.0.2/fresh.min.js"></script>
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+			  apiKey: "AIzaSyBr5n-Ex_B6KYh7GpfRjoTp48bm-7ulAvg",
+			  authDomain: "waypoint-62326.firebaseapp.com",
+			  databaseURL: "https://waypoint-62326.firebaseio.com/",
+			  projectId: "waypoint-62326",
+			  storageBucket: "waypoint-62326.appspot.com",
+			  messagingSenderId: "50441512367",
+			  appId: "1:50441512367:web:b806ca7b7c94ebf2"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			var database = firebase.database();
+			
+			
+			$('.buttonLogin').click(function() {
+		  	const email = $('#email').val();
+		  	const pass = $('#password').val();
+		  	console.log(email);
+		  	console.log(pass);
+		  	var promise = firebase.auth().signInWithEmailAndPassword(email, pass);
+		  	promise.catch(e => window.alert(e.message));
+		  });
+		  firebase.auth().onAuthStateChanged(firebaseUser => {
+		  	if(firebaseUser) {
+		  		console.log(firebaseUser);
+		  		window.location.href = "index.html";
+		  	} else {
+		  		console.log('not logged in');
+		  	}
+		  });
+		</script>
+	</body>
+</html>

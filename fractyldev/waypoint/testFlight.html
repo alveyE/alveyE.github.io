@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Waypoint Communication TestFlight</title>
+		<link rel = "stylesheet" type = "text/css" href = "https://cdn.jsdelivr.net/gh/HunterBall/fresh@1.0.2/fresh.min.css">
+		<link rel = "stylesheet" type = "text/css" href = "styles/main.css">
+		<link rel = "stylesheet" type = "text/css" href = "styles/animate.css">
+		<link rel = "shortcut icon" type = "image/png" href = "images/icons/map.png">
+		<style>
+			:root {
+				--color-accent: #5bb8b5;
+				--text-accent: #ffffff;
+				--color-secondary: #f0f0f0;
+				--text-secondary: #404040;
+				--footer-text: #ffffff;
+				--footer-color: var(--color-accent);
+			}
+			.w-testflight {
+				width: 300px;
+				object-fit: cover;
+				object-position: 0 0;
+				margin: 0 auto;
+				display: block;
+				right: 100px;
+			}
+			.w-content {
+				position: relative;
+				z-index: 100;
+				background: rgba(91,184,181, 0.5);
+				color: black;
+				width: 100%;
+				box-sizing: border-box;
+				padding: 10vh 100px;
+				padding-right: calc(33% + 100px);
+			}
+			.w-phone {
+				height: 85vh;
+				width: auto;
+				position: absolute;
+				right: 100px;
+				top: 10vh;
+				top: 20px;
+				z-index: 109;
+				opacity: 0;
+			}
+			.w-phone.active {
+				opacity: 1;
+			}
+			@media screen and (max-width: 800px) {
+				.w-testflight {
+					height: 0;
+				}
+				.w-phone {
+					width: auto;
+					height: 92.5vh;
+					top: 20px;
+					right: -33vh;
+					position: fixed;
+					z-index: 110;
+				}
+				.w-content {
+					padding: 10px 20px;
+					box-sizing: border-box;
+					padding-right: 30%;
+					margin-top: 0;
+				}
+				.w-content h4 {
+					margin-top: 0;
+				}
+				.w-content p {
+					margin-top: 0;font-size: 0.85rem;
+				}
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Viewport Meta Tag-->
+		<meta name="revised" content="Saturday, November 9th, 2019, 6:52pm"/><!--CHANGE THIS EVERYTIME-->
+		<meta name="keywords" content="Waypoint, Communication, Social Media, iPhone, notes"/>
+		<meta name="subject" content="Waypoint Communication">
+		<meta name="copyright" content="FractylDev">
+		<meta name="author" content="Hunter Ball & FractylDev">
+		<meta name="designer" content="Hunter Ball">
+		<meta name="owner" content="FractylDev">
+		<meta name="url" content="http://waypoint.fractyldev.com/testflight/index.html">
+		<meta name="revisit-after" content="1 Month">
+	</head>
+	<body>
+		<div class = "main">
+			<div class = "alert activated" id = "alert">
+				<p>Thank you for testing the beta version of Waypoint Communication. Your feedback will help us create an even better experience for our users!</p>
+				<a class = "trigger" data-tether = "alert">&times;</a>
+			</div>
+			<div class = "w-content" style = "margin-top: 0; padding-bottom: 20px">
+				<div class = "spacer small mobile-only"></div>
+				<h2>Waypoint Comunication</h2>
+				<h4>TestFlight</h4>
+			</div>
+			<div class = "w-content" style = "background-color: rgba(255, 255, 255, 0); padding-top: 35px;">
+				<p>Waypoint Communication is a location-based social platform for anyone to share what is going on around them, whether it's local events, safety concerns, travelling info, or just thse awesome moments in life, create notes containing text, images, drawings, and links that will be pinned to your current location. These notes automatically disappear after 24 hours, ensuring the map is current. Don’t worry though, you can save notes to view them later!</p>
+				<p>Waypoint Communication is not currently available for TestFlight. Check back later for more updates!</p>
+				<!--<div class = "columns">
+					<a class = "button column" href = "https://testflight.apple.com/join/bAGzFP4l">Download the TestFlight</a>
+					<a class = "button column" href = "https://forms.gle/edHwVTnsuDQu9f1w7" target = "_blank">Share your Experience</a>
+				</div>-->
+			</div>
+			<img class = "w-phone active" src = "images/features1.png">
+			<div class = "clear"></div>
+		</div>
+		<script src = "https://cdn.jsdelivr.net/gh/hunterball/fresh@1.0.2/fresh.min.js"></script>
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+		<script src = "../web.js"></script>
+	</body>
+</html>
