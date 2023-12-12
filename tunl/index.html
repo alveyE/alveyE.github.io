@@ -36,7 +36,7 @@
         margin-top: 10px;
         max-height: 300px;
         overflow-y: auto;
-        background-color: #fff;
+        background-color: #fff; /* Added white background for better readability */
       }
 
       #inputBox {
@@ -103,7 +103,8 @@
 
         displayMessage("Given Topic: " + userMessage);
 
-        const apiKey = "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";
+        // Call OpenAI API (replace 'YOUR_API_KEY' with your actual API key)
+        const apiKey = "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";
         const apiUrl =
           "https://api.openai.com/v1/engines/davinci-codex/completions";
         generateSampleQuestion(userMessage);
@@ -119,8 +120,11 @@
 
       function generateSampleQuestion(prompt) {
         console.log("Generating sample question for prompt: " + prompt);
-        const apiKey = "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";
+        const apiKey = "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";
 
+        // Define the prompt and other parameters for the API call
+
+        // Send the prompt to OpenAI
         fetch("https://api.openai.com/v1/completions", {
           method: "POST",
           headers: {
@@ -139,6 +143,7 @@
         })
           .then((response) => response.json())
           .then((data) => {
+            // Log the response from OpenAI
             console.log(data.choices[0].text);
             displayMessage("Tunl: " + data.choices[0].text);
           })
